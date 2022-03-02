@@ -3,7 +3,7 @@ This repository contains the skeleton for the ERS Project.
 The [milestones.md](./milestones.md) can provide insight on helpful benchmarks.
 
 > ERS, or Expense Reimbursement System, The Java Expense Reimbursement System is a full-stack web application that allows employees to submit reimbursement requests for work related expenses. Users can log in using their email and password. Employees are able to submit new reimbursement requests, and managers are able to view all submitted requests. Managers are also able to filter these requests based on their status.
- S
+ 
 > You will be required to present a demo of your application and its features.
 > 
 > Presentation date: Monday, March 21, 2022
