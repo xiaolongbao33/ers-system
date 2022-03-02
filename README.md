@@ -2,8 +2,10 @@
 This repository contains the skeleton for the ERS Project.
 The [milestones.md](./milestones.md) can provide insight on helpful benchmarks.
 
-> ERS, or Employee Reimbursement System, is a full-stack web application that allows employees to submit requests for reimbursements for courses, events, and certifications. Requests can be viewed by a manager, while the employee is able to track the status of their requests.
-> You will be required to present a demo of your application and its features. 
+> ERS, or Expense Reimbursement System, The Java Expense Reimbursement System is a full-stack web application that allows employees to submit reimbursement requests for work related expenses. Users can log in using their email and password. Employees are able to submit new reimbursement requests, and managers are able to view all submitted requests. Managers are also able to filter these requests based on their status.
+ S
+> You will be required to present a demo of your application and its features.
+> 
 > Presentation date: Monday, March 21, 2022
 
 
@@ -43,7 +45,7 @@ Your applications must support the following HTTP requests:
 - GET /reimbursements
   - optional query param: 'status' - supports values 'pending', 'denied', 'approved'
   - returns: 
-    - 200 - array type of reimbursement objects - e.g. `[{ "id": 1, "username": "jshmo@gmail.com", ... }]` (required json properties: "id", "username")
+    - 200 - array type of reimbursement objects -  e.g. `[{ { "id": 1, "description": "dinner","status": "PENDING", "amount": 120.25, "date": [ 2022, 2, 11 ]}, ... }]` (required json properties: "id", "description", "status"="PENDING";"DENIED";"APPROVED", "amount", "date"=LocalDate.class)
 
 - POST /reimbursements
   - required form params: 'employee-id', 'description', 'amount'
@@ -71,7 +73,7 @@ Your applications must support the following HTTP requests:
   - returns:
     - 200 - array type of employee objects - e.g. `[{ { "id": 1, "description": "dinner","status": "PENDING", "amount": 120.25, "date": [ 2022, 2, 11 ]}, ... }]` (required json properties: "id", "description", "status"="PENDING";"DENIED";"APPROVED", "amount", "date"=LocalDate.class)
 - GET /employees/{id}/reimbursements
-  - returns: array type of reimbursements - e.g. `[{ { "id": 1, "description": "dinner","status": "PENDING", "amount": 120.25, "date": [ 2022, 2, 11 ]}, ... }]` (required json properties: "id", "description", "status"="PENDING";"DENIED";"APPROVED", "amount", "date"=LocalDate.class)
+  - returns: array type of reimbursements - e.g. `[{ "id": 1, "username": "jshmo@gmail.com", ... }]` (required json properties: "id", "username")
 
 ## Other Project Goals 
 - All application data is stored with AWS RDS.
