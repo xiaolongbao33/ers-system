@@ -1,7 +1,6 @@
 package com.revature.daos;
 
 import com.revature.models.Employee;
-import com.revature.daos.EmployeeDao;
 import com.revature.util.ConnectionUtil;
 
 import java.sql.Connection;
@@ -15,7 +14,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
         // use customer object to create valid SQL statement
         // insert into customer values (); this statement is parameterized so we want to use a PS
         try(Connection connection = ConnectionUtil.getConnection()){
-            PreparedStatement ps = connection.prepareStatement("insert into customer values (default, ?, ?, ?)");
+            PreparedStatement ps = connection.prepareStatement("insert into employee values (default, ?, ?, ?)");
             ps.setInt(1,employee.getEmployeeId());
             ps.setString(2, employee.getUsername());
             ps.setString(3, employee.getPassword());
@@ -35,6 +34,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
         return null;
     }
 }
+
 
 
 

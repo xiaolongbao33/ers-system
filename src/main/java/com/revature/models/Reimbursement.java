@@ -10,6 +10,8 @@ public class Reimbursement {
     private int reimbursementId;
     private String reimbursementDesc;
     private int reimbursementAmount;
+    private LocalDate dateRequested;
+    private String reimbursementStatus;
 
     public int getReimbursementId() {
         return reimbursementId;
@@ -50,10 +52,6 @@ public class Reimbursement {
     public void setReimbursementStatus(String reimbursementStatus) {
         this.reimbursementStatus = reimbursementStatus;
     }
-
-    private LocalDate dateRequested;
-    private String reimbursementStatus;
-
 
 
     //    @Override
