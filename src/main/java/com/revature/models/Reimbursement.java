@@ -9,7 +9,7 @@ public class Reimbursement {
     // TODO: Define Reimbursement Model
     private int reimbursementId;
     private String reimbursementDesc;
-    private int reimbursementAmount;
+    private double reimbursementAmount;
     private LocalDate dateRequested;
     private String reimbursementStatus;
 
@@ -29,7 +29,7 @@ public class Reimbursement {
         this.reimbursementDesc = reimbursementDesc;
     }
 
-    public int getReimbursementAmount() {
+    public double getReimbursementAmount() {
         return reimbursementAmount;
     }
 
@@ -53,6 +53,18 @@ public class Reimbursement {
         this.reimbursementStatus = reimbursementStatus;
     }
 
+    public Reimbursement(int reimbursementId, String iphone, double v, LocalDate of, String pending) {
+        super();
+    }
+
+    public Reimbursement(int reimbursementId, String reimbursementDesc, int reimbursementAmount, LocalDate dateRequested, String reimbursementStatus) {
+        super();
+        this.reimbursementId = reimbursementId;
+        this.reimbursementDesc = reimbursementDesc;
+        this.reimbursementAmount = reimbursementAmount;
+        this.dateRequested = dateRequested;
+        this.reimbursementStatus = reimbursementStatus;
+    }
 
     //    @Override
 //    public boolean equals(Object o) {

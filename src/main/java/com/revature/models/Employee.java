@@ -4,18 +4,18 @@ import java.util.Objects;
 
 public class Employee {
 
-    private int employeeId;
+//    private int employeeId;
     private String username;
     private String password;
 
 
-    public int getEmployeeId() {
-        return employeeId;
-    }
+//    public int getEmployeeId() {
+//        return employeeId;
+//    }
 
-    public void setEmployeeId(int employeeId) {
-        this.employeeId = employeeId;
-    }
+//    public void setEmployeeId(int employeeId) {
+//        this.employeeId = employeeId;
+//    }
 
     public String getUsername() {
         return username;
@@ -44,12 +44,12 @@ public class Employee {
 
     }
 
-    public Employee(int employeeId, String username, String password) {
-        super();
-        this.employeeId = employeeId;
-        this.username = username;
-        this.password = password;
-    }
+//    public Employee(String username, String password) {
+//        super();
+////        this.employeeId = employeeId;
+//        this.username = username;
+//        this.password = password;
+//    }
 
 
 //    @Override
@@ -62,13 +62,13 @@ public class Employee {
 
     @Override
     public int hashCode() {
-        return Objects.hash(employeeId, username, password);
+        return Objects.hash(username, password);
     }
 
     @Override
     public String toString() {
         return "Employee{" +
-                "employeeId=" + employeeId +
+//                "employeeId=" + employeeId +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 '}';

@@ -1,7 +1,5 @@
 package com.revature.daos;
 
-import com.revature.models.Employee;
-import com.revature.daos.ReimbursementDao;
 import com.revature.models.Reimbursement;
 import com.revature.util.ConnectionUtil;
 
@@ -11,6 +9,17 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class ReimbursementDAOImpl implements ReimbursementDAO {
+
+    @Override
+    public List<Reimbursement> getAllReimbursements() {
+        return null;
+    }
+
+    @Override
+    public boolean createReimbursement(Reimbursement reimbursement) {
+        return false;
+    }
+
     @Override
     public void create(Reimbursement reimbursement) {
         // use customer object to create valid SQL statement
@@ -19,7 +28,7 @@ public class ReimbursementDAOImpl implements ReimbursementDAO {
             PreparedStatement ps = connection.prepareStatement("insert into reimbursement values (default, ?, ?, ?, ?)");
             ps.setInt(1, reimbursement.getReimbursementId());
             ps.setString(2, reimbursement.getReimbursementDesc());
-            ps.setInt(3, reimbursement.getReimbursementAmount());
+            ps.setDouble(3, reimbursement.getReimbursementAmount());
             ps.setString(4, reimbursement.getReimbursementStatus());
 
             ps.executeUpdate();
@@ -33,9 +42,30 @@ public class ReimbursementDAOImpl implements ReimbursementDAO {
     }
 
     @Override
-    public List<Employee> getAllCustomerData() {
+    public List<Reimbursement> getPendingReimbursements() {
         return null;
     }
+
+    @Override
+    public List<Reimbursement> getApprovedReimbursements() {
+        return null;
+    }
+
+    @Override
+    public List<Reimbursement> getDeniedReimbursements() {
+        return null;
+    }
+
+    @Override
+    public List<Reimbursement> getReimbursementsByEmployee(int employeeId) {
+        return null;
+    }
+
+    @Override
+    public boolean updateReimbursement(Reimbursement reimbursement) {
+        return false;
+    }
+
 }
 
 

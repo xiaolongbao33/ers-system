@@ -3,12 +3,14 @@ package com.revature.daos;
 import com.revature.models.Employee;
 import java.util.List;
 
-public interface EmployeeDao {
+public interface EmployeeDAO {
 
     /*
         required user stories
      */
-    public Employee getEmployeeByUsernameAndPassword(String username, String password);
+    Employee getEmployeeByUsernameAndPassword(String username, String password);
+
+    public void create(Employee employee);
 
     /*
         bonus user stories
