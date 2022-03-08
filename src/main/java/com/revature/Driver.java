@@ -12,17 +12,15 @@ import java.time.LocalDate;
 public class Driver {
 
     public static void main(String[] args) {
-//        CustomerDAO customerDAO = new CustomerDAOImpl();
-//        Customer c = new Customer("Doug", "Bradley", "dbrad@gmail.com", LocalDate.of(1991,11,19));
-//        customerDAO.create(c);
 
-        EmployeeDAO employeeDAO = new EmployeeDAOImpl();
-        Employee c = new Employee("Kelly", "kellypass");
-        employeeDAO.create(c);
+//        EmployeeDAO employeeDAO = new EmployeeDAOImpl();
+//        Employee c = new Employee("Kelly", "kellypass");
+//        employeeDAO.create(c);
 
-//        ReimbursementDAO reimbursementDAO = new ReimbursementDAOImpl();
-//        Reimbursement r = new Reimbursement(3, "iphone", 100.00, LocalDate.of(1991,11,19), "pending");
-//        reimbursementDAO.create(r);
+        ReimbursementDAO reimbursementDAO = new ReimbursementDAOImpl();
+        // new Reimbursement(reimb_id, reimb_desc, reimb_amount, reimb_date_req, reimb_status, )
+        Reimbursement r = new Reimbursement("iphone", 100.00, LocalDate.of(1991,11,19), "pending");
+        reimbursementDAO.create(r);
     }
 }
 

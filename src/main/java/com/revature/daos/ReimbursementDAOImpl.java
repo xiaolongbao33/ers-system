@@ -26,9 +26,10 @@ public class ReimbursementDAOImpl implements ReimbursementDAO {
         // insert into customer values (); this statement is parameterized so we want to use a PS
         try(Connection connection = ConnectionUtil.getConnection()){
             PreparedStatement ps = connection.prepareStatement("insert into reimbursement values (default, ?, ?, ?, ?)");
-            ps.setInt(1, reimbursement.getReimbursementId());
-            ps.setString(2, reimbursement.getReimbursementDesc());
-            ps.setDouble(3, reimbursement.getReimbursementAmount());
+//            ps.setInt(1, reimbursement.getReimbursementId());
+            ps.setString(1, reimbursement.getReimbursementDesc());
+            ps.setDouble(2, reimbursement.getReimbursementAmount());
+            ps.setObject(3, reimbursement.getDateRequested());
             ps.setString(4, reimbursement.getReimbursementStatus());
 
             ps.executeUpdate();
