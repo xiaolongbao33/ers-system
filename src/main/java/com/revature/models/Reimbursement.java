@@ -7,19 +7,43 @@ public class Reimbursement {
 
     // TODO: Define Reimbursement Model
     // new Reimbursement(int reimb_id, String reimb_desc, double reimb_amount, LocalDate reimb_date_req, String reimb_status, )
-//    private int reimbursementId;
+    private int reimbursementId;
     private String reimbursementDesc;
     private double reimbursementAmount;
     private LocalDate dateRequested;
     private String reimbursementStatus;
 
-//    public int getReimbursementId() {
-//        return reimbursementId;
-//    }
+    public Reimbursement() {
+        super();
+    }
 
-//    public void setReimbursementId(int reimbursementId) {
+    // new Reimbursement(int reimb_id, String reimb_desc, double reimb_amount, LocalDate reimb_date_req, String reimb_status, )
+    public Reimbursement(String reimbursementDesc, double reimbursementAmount, LocalDate dateRequested, String reimbursementStatus) {
+        super();
 //        this.reimbursementId = reimbursementId;
-//    }
+        this.reimbursementDesc = reimbursementDesc;
+        this.reimbursementAmount = reimbursementAmount;
+        this.dateRequested = dateRequested;
+        this.reimbursementStatus = reimbursementStatus;
+    }
+
+    // new Reimbursement(int reimb_id, String reimb_desc, double reimb_amount, LocalDate reimb_date_req, String reimb_status, )
+    public Reimbursement(int reimbursementId, String reimbursementDesc, double reimbursementAmount, LocalDate dateRequested, String reimbursementStatus) {
+        super();
+        this.reimbursementId = reimbursementId;
+        this.reimbursementDesc = reimbursementDesc;
+        this.reimbursementAmount = reimbursementAmount;
+        this.dateRequested = dateRequested;
+        this.reimbursementStatus = reimbursementStatus;
+    }
+
+    public int getReimbursementId() {
+        return reimbursementId;
+    }
+
+    public void setReimbursementId(int reimbursementId) {
+        this.reimbursementId = reimbursementId;
+    }
 
     public String getReimbursementDesc() {
         return reimbursementDesc;
@@ -50,21 +74,6 @@ public class Reimbursement {
     }
 
     public void setReimbursementStatus(String reimbursementStatus) {
-        this.reimbursementStatus = reimbursementStatus;
-    }
-
-    // new Reimbursement(int reimb_id, String reimb_desc, double reimb_amount, LocalDate reimb_date_req, String reimb_status, )
-//    public Reimbursement(int reimbursementId, String reimbursementDesc, double reimbursementAmount, LocalDate dateRequested, String reimbursementStatus) {
-//        super();
-//    }
-
-    // new Reimbursement(int reimb_id, String reimb_desc, double reimb_amount, LocalDate reimb_date_req, String reimb_status, )
-    public Reimbursement(String reimbursementDesc, double reimbursementAmount, LocalDate dateRequested, String reimbursementStatus) {
-        super();
-//        this.reimbursementId = reimbursementId;
-        this.reimbursementDesc = reimbursementDesc;
-        this.reimbursementAmount = reimbursementAmount;
-        this.dateRequested = dateRequested;
         this.reimbursementStatus = reimbursementStatus;
     }
 

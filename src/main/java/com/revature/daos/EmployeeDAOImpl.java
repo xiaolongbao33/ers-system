@@ -3,15 +3,22 @@ package com.revature.daos;
 import com.revature.models.Employee;
 import com.revature.util.ConnectionUtil;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeeDAOImpl implements EmployeeDAO {
 
     @Override
     public Employee getEmployeeByUsernameAndPassword(String username, String password) {
+        // get username and password from HTML form
+        // compare username and password
+        // redirect manager to 'all-reimbursement' page
+        // redirect employee to 'submit-reimbursement' page
+        // create a statement (set params if we need to)
+        // select * from customer
+
         return null;
     }
 
@@ -34,6 +41,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
         // provide that SQL to JDBC to execute in our DB
 
     }
+
 
     @Override
     public List<Employee> getAllEmployees() {
