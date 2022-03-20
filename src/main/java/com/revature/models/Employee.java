@@ -29,10 +29,11 @@ public class Employee {
         super();
     }
 
-    public Employee(String username, String password) {
+    public Employee(String username, String password, UserRole role) {
         super();
         this.username = username;
         this.password = password;
+        this.role = role;
 
     }
 
