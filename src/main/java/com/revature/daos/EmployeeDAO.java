@@ -4,13 +4,14 @@ import com.revature.models.Employee;
 import java.util.List;
 
 public interface EmployeeDAO {
-
     /*
-        required user stories
-     */
-    Employee getEmployeeByUsernameAndPassword(String username, String password);
+       required user stories
+    */
+    static boolean getEmployeeByUsernameAndPassword(String newUsername, String newPassword) {
+        return false;
+    }
 
-    public void create(Employee employee);
+    public boolean create(Employee employee);
 
     /*
         bonus user stories
