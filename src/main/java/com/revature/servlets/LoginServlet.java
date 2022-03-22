@@ -51,12 +51,12 @@ public class LoginServlet extends HttpServlet {
         if(successfulCreation && newEmployee.getRole().equals(UserRole.MANAGER)){
             //redirect to either submission request page or manager view all submission page
 //            resp.setStatus(201);
-            resp.sendRedirect("/ExpenseReimbursementSystem/successSubmission.html");
+            resp.sendRedirect("/ExpenseReimbursementSystem/views/manager/all-reimbursements.html");
         }
         if(successfulCreation && newEmployee.getRole().equals(UserRole.EMPLOYEE)){
             //redirect to either submission request page or manager view all submission page
 //            resp.setStatus(201);
-            resp.sendRedirect("/ExpenseReimbursementSystem/reim-success.html");
+            resp.sendRedirect("/ExpenseReimbursementSystem/reim-req.html");
         }
     }
 }
