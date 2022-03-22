@@ -11,32 +11,18 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 
     public boolean getEmployeeByUsernameAndPassword(String username, String password) {
         // create a connection to the database (using try with resources bc connection is Autocloseable)
-        try (Connection connection = ConnectionUtil.getConnection();
-             // create a statement (set params if we need to)
-             // select * from customer
-             Statement statement = connection.createStatement();) {
+        try(Connection connection = ConnectionUtil.getConnection();
+            PreparedStatement ps = connection.prepareStatement("select * from employee where username=? and password=?");){
 
-            // execute statement, get a resultset in return
-            ResultSet resultSet = statement.executeQuery("select * from employee where username=? and password=?");
+            ps.setString(1, username);
+            ps.setString(2, password);
 
-            // creating list to store my customers when I get them from the db
-            List<Employee> employees = new ArrayList<>();
-            Employee e = new Employee(username, password);
+            // execute statement, get a result set in return
+            ResultSet resultSet = ps.executeQuery();
 
-            // create customer objects with what we get from the database (resultset)
-            // get all of the fields from the records in our db and use them to populate a customer object
-            boolean success = false;
-            while (resultSet.next()) {
-                // get all data from the row
-                String userName = resultSet.getString("username");
-                String passWord = resultSet.getString("password");
-                // add customer objects to a list
-                employees.add(e);
-                success = employees.equals(e);
+            if (resultSet.next()) {
+                return true;
             }
-
-            // return list
-            return success;
 
         } catch (SQLException e) {
             e.printStackTrace();

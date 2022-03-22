@@ -8,6 +8,12 @@ public class ConnectionUtil {
 
     public static Connection getConnection() throws SQLException {
 
+        try {
+            Class.forName("org.postgresql.Driver");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
         String connectionString = "jdbc:postgresql://training-db-0301.cj0whtyhs6u2.us-east-1.rds.amazonaws" +
                 ".com:5432/postgres";
 

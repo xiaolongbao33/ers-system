@@ -7,9 +7,7 @@ public interface EmployeeDAO {
     /*
        required user stories
     */
-    static boolean getEmployeeByUsernameAndPassword(String newUsername, String newPassword) {
-        return false;
-    }
+    public boolean getEmployeeByUsernameAndPassword(String newUsername, String newPassword);
 
     public boolean create(Employee employee);
 
