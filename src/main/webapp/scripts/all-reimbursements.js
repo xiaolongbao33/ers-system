@@ -17,7 +17,7 @@ window.onload = function () {
 
     // fetch reimbursement data based on status, render table with data
     function ajaxGetReimbursements(status) {
-        let requestUrl = "http://localhost:8080/ExpenseReimbursementSystem/reimbursements"
+        let requestUrl = "http://localhost:8013/ExpenseReimbursementSystem/reimbursements"
         if (status) {
             requestUrl = requestUrl + "?status=" + status;
         }

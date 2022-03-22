@@ -9,6 +9,15 @@
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>ViewAllReimbursements</servlet-name>
+        <servlet-class>com.revature.servlets.ViewAllReimbursements</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ViewAllReimbursements</servlet-name>
+        <url-pattern>/reimbursements</url-pattern>
+    </servlet-mapping>
+
 <!--    <servlet>-->
 <!--        <servlet-name>ReqSubmissionServlet</servlet-name>-->
 <!--        <servlet-class>com.revature.servlets.ReqSubmissionServlet</servlet-class>-->
