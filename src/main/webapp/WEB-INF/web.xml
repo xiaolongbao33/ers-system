@@ -10,11 +10,11 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>ViewAllReimbursements</servlet-name>
-        <servlet-class>com.revature.servlets.ViewAllReimbursements</servlet-class>
+        <servlet-name>ViewAllReimbursementsServlet</servlet-name>
+        <servlet-class>com.revature.servlets.ViewAllReimbursementsServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>ViewAllReimbursements</servlet-name>
+        <servlet-name>ViewAllReimbursementsServlet</servlet-name>
         <url-pattern>/reimbursements</url-pattern>
     </servlet-mapping>
 

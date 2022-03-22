@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class ViewAllReimbursements extends HttpServlet {
+public class ViewAllReimbursementsServlet extends HttpServlet {
 
     // overriding doGet method to respond accordingly to that request
     @Override
