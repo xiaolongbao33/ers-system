@@ -1,21 +1,22 @@
 package com.revature.daos;
 
 import com.revature.models.Employee;
+import com.revature.models.UserRole;
 import com.revature.util.ConnectionUtil;
 
 import java.sql.*;
-import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeeDAOImpl implements EmployeeDAO {
 
-    public boolean getEmployeeByUsernameAndPassword(String username, String password) {
+    public boolean getEmployeeByUsernameAndPassword(String username, String password, UserRole role) {
         // create a connection to the database (using try with resources bc connection is Autocloseable)
         try(Connection connection = ConnectionUtil.getConnection();
-            PreparedStatement ps = connection.prepareStatement("select * from employee where username=? and password=?");){
+            PreparedStatement ps = connection.prepareStatement("select * from employee where username=? and password=? and role=?");){
 
             ps.setString(1, username);
             ps.setString(2, password);
+            ps.setString(3, String.valueOf(role));
 
             // execute statement, get a result set in return
             ResultSet resultSet = ps.executeQuery();

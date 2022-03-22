@@ -1,6 +1,7 @@
 package com.revature.models;
 
 import java.util.Objects;
+import com.revature.models.UserRole;
 
 public class Employee {
 
@@ -8,6 +9,14 @@ public class Employee {
     private String username;
     private String password;
     private UserRole role;
+
+    public UserRole getRole() {
+        return role;
+    }
+
+    public void setRole(UserRole role) {
+        this.role = role;
+    }
 
     public String getUsername() {
         return username;
@@ -25,7 +34,7 @@ public class Employee {
         this.password = password;
     }
 
-    public Employee(String userName, String passWord) {
+    public Employee(String newUsername, String newPassword, String role) {
         super();
     }
 
