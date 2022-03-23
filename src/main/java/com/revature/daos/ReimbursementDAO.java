@@ -1,6 +1,8 @@
 package com.revature.daos;
 
 import com.revature.models.Reimbursement;
+
+import java.sql.SQLException;
 import java.util.List;
 
 public interface ReimbursementDAO {
@@ -8,9 +10,9 @@ public interface ReimbursementDAO {
     /*
         required user stories
      */
-    public List<Reimbursement> getAllReimbursements();
+    public List<Reimbursement> getAllReimbursements() throws SQLException;
     public boolean createReimbursement(Reimbursement reimbursement);
-    public void create(Reimbursement reimbursement);
+    public boolean create(Reimbursement reimbursement);
 
     // these can be replaced with a single "getReimbursementsByStatus" method
     public List<Reimbursement> getPendingReimbursements();

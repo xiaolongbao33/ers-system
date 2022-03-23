@@ -6,76 +6,76 @@ import java.util.Objects;
 public class Reimbursement {
 
     // TODO: Define Reimbursement Model
-    // new Reimbursement(int reimb_id, String reimb_desc, double reimb_amount, LocalDate reimb_date_req, String reimb_status, )
-    private int reimbursementId;
-    private String reimbursementDesc;
-    private double reimbursementAmount;
-    private LocalDate dateRequested;
-    private String reimbursementStatus;
+    private int id;
+    private String description;
+    private double amount;
+    private LocalDate date;
+    private String status;
 
     public Reimbursement() {
         super();
     }
 
-    // new Reimbursement(int reimb_id, String reimb_desc, double reimb_amount, LocalDate reimb_date_req, String reimb_status, )
-    public Reimbursement(String reimbursementDesc, double reimbursementAmount, LocalDate dateRequested, String reimbursementStatus) {
+    public Reimbursement(int id, String description, String status, double amount, LocalDate date) {
         super();
-//        this.reimbursementId = reimbursementId;
-        this.reimbursementDesc = reimbursementDesc;
-        this.reimbursementAmount = reimbursementAmount;
-        this.dateRequested = dateRequested;
-        this.reimbursementStatus = reimbursementStatus;
+        this.id = id;
+        this.description = description;
+        this.status = status;
+        this.amount = amount;
+        this.date = date;
     }
 
-    // new Reimbursement(int reimb_id, String reimb_desc, double reimb_amount, LocalDate reimb_date_req, String reimb_status, )
-    public Reimbursement(int reimbursementId, String reimbursementDesc, double reimbursementAmount, LocalDate dateRequested, String reimbursementStatus) {
+    public Reimbursement(String description, String status, double amount, LocalDate date) {
         super();
-        this.reimbursementId = reimbursementId;
-        this.reimbursementDesc = reimbursementDesc;
-        this.reimbursementAmount = reimbursementAmount;
-        this.dateRequested = dateRequested;
-        this.reimbursementStatus = reimbursementStatus;
+//        this.id = id;
+        this.description = description;
+        this.status = status;
+        this.amount = amount;
+        this.date = date;
+
     }
 
-    public int getReimbursementId() {
-        return reimbursementId;
+    public int getId() {
+        return id;
     }
 
-    public void setReimbursementId(int reimbursementId) {
-        this.reimbursementId = reimbursementId;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getReimbursementDesc() {
-        return reimbursementDesc;
+    public String getDescription() {
+        return description;
     }
 
-    public void setReimbursementDesc(String reimbursementDesc) {
-        this.reimbursementDesc = reimbursementDesc;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public double getReimbursementAmount() {
-        return reimbursementAmount;
+    public double getAmount() {
+        return amount;
     }
 
-    public void setReimbursementAmount(int reimbursementAmount) {
-        this.reimbursementAmount = reimbursementAmount;
+    public void setAmount(double amount) {
+        this.amount = amount;
     }
 
-    public LocalDate getDateRequested() {
-        return dateRequested;
+    public LocalDate getDate() {
+        return date;
     }
 
-    public void setDateRequested(LocalDate dateRequested) {
-        this.dateRequested = dateRequested;
+    public void setDate(LocalDate date) {
+        this.date = date;
     }
 
-    public String getReimbursementStatus() {
-        return reimbursementStatus;
+    public String getStatus() {
+        return status;
     }
 
-    public void setReimbursementStatus(String reimbursementStatus) {
-        this.reimbursementStatus = reimbursementStatus;
+    public void setStatus(String status) {
+        this.status = status;
     }
+
+
 
     //    @Override
 //    public boolean equals(Object o) {
@@ -87,17 +87,16 @@ public class Reimbursement {
 
     @Override
     public int hashCode() {
-        return Objects.hash(reimbursementDesc, reimbursementAmount, dateRequested, reimbursementStatus);
+        return Objects.hash(description, amount, date, status);
     }
 
     @Override
     public String toString() {
         return "Reimbursement{" +
-//                "reimbursementId=" + reimbursementId +
-                ", reimbursementDesc='" + reimbursementDesc + '\'' +
-                ", reimbursementAmount='" + reimbursementAmount + '\'' +
-                ", dateRequested,='" + dateRequested + '\'' +
-                ", reimbursementStatus='" + reimbursementStatus + '\'' +
+                ", description='" + description + '\'' +
+                ", amount='" + amount + '\'' +
+                ", date,='" + date + '\'' +
+                ", status='" + status + '\'' +
                 '}';
     }
 

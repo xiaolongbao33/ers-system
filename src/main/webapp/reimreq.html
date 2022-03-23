@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enter Username and Password</title>
+</head>
+<body>
+
+<form method="POST" action="reimreq">
+    <!-- action = /customer-invoice-app/customers -->
+<!--    <label for="employeeid">Employee ID:</label>-->
+<!--    <input id="employeeid" name="employeeid"> <br> <br>-->
+    <label for="description">Reimbursement Description:</label>
+    <input id="description" name="description"> <br> <br>
+    <label for="amount">Reimbursement Amount:</label>
+    <input id="amount" name="amount"> <br> <br>
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date"> <br> <br>
+    <label for="status">Status:</label>
+    <select id="status">
+        <option value="PENDING" selected>Pending</option>
+    </select> <br> <br>
+    <input type="submit" value="Submit Request!">
+</form>
+
+</body>
+</html>

@@ -18,6 +18,15 @@
         <url-pattern>/reimbursements</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>ReimReqSubmissionServlet</servlet-name>
+        <servlet-class>com.revature.servlets.ReimReqSubmissionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReimReqSubmissionServlet</servlet-name>
+        <url-pattern>/reimreq</url-pattern>
+    </servlet-mapping>
+
 <!--    <servlet>-->
 <!--        <servlet-name>ReqSubmissionServlet</servlet-name>-->
 <!--        <servlet-class>com.revature.servlets.ReqSubmissionServlet</servlet-class>-->

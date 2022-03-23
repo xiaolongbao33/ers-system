@@ -10,7 +10,7 @@ window.onload = function () {
 
     // request employee data (non manager data)
     function ajaxGetEmployees() {
-        let requestUrl = "http://localhost:8080/ExpenseReimbursementSystem/employees?isManager=false";
+        let requestUrl = "http://localhost:8013/ExpenseReimbursementSystem/employees?isManager=false";
         const xhr = new XMLHttpRequest();
         ajaxGetRequest(requestUrl, populateDropdown)
     }
