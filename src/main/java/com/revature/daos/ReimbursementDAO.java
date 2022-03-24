@@ -14,6 +14,8 @@ public interface ReimbursementDAO {
     public boolean createReimbursement(Reimbursement reimbursement);
     public boolean create(Reimbursement reimbursement);
 
+//    public List<Reimbursement> updateReimbursementPostman(int id, String status);
+
     // these can be replaced with a single "getReimbursementsByStatus" method
     public List<Reimbursement> getPendingReimbursements();
     public List<Reimbursement> getApprovedReimbursements();

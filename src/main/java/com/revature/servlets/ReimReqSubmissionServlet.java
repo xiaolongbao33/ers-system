@@ -37,10 +37,6 @@ public class ReimReqSubmissionServlet extends HttpServlet {
             resp.sendError(400, "Description is a required field");
         }
 
-//        if(newReimbursement.getAmount() == null){
-//            resp.sendError(400, "Amount is a required field");
-//            return;
-//        }
         boolean successfulCreation = reimbursementDAO.create(newReimbursement);
         System.out.println(newReimbursement.getDescription());
         System.out.println(newReimbursement.getAmount());
@@ -50,16 +46,8 @@ public class ReimReqSubmissionServlet extends HttpServlet {
         if(successfulCreation){
             //redirect to either submission request page or manager view all submission page
 //            resp.setStatus(201);
-            resp.sendRedirect("/ExpenseReimbursementSystem/successSubmission.html");
+            resp.sendRedirect("/ExpenseReimbursementSystem/submissionConfirmation.html");
         }
-
-        // obtain the new user info from the request body
-//        try(BufferedReader reader = req.getReader();){
-//            String requestBody = reader.readLine(); // reads in any text in the request body
-//            System.out.println(requestBody);
-//            // store that info with the rest of our user data
-//            // return a response to our client
-//        }
 
     }
 }

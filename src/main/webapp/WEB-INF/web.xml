@@ -27,6 +27,15 @@
         <url-pattern>/reimreq</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>UpdateStatusServlet</servlet-name>
+        <servlet-class>com.revature.servlets.UpdateStatusServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateStatusServlet</servlet-name>
+        <url-pattern>/updatestatus</url-pattern>
+    </servlet-mapping>
+
 <!--    <servlet>-->
 <!--        <servlet-name>ReqSubmissionServlet</servlet-name>-->
 <!--        <servlet-class>com.revature.servlets.ReqSubmissionServlet</servlet-class>-->

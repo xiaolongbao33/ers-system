@@ -35,6 +35,9 @@ public class Reimbursement {
 
     }
 
+    public Reimbursement(int id, String status) {
+    }
+
     public int getId() {
         return id;
     }

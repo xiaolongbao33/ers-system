@@ -75,6 +75,47 @@ public class ReimbursementDAOImpl implements ReimbursementDAO {
     }
 
     @Override
+    public boolean updateReimbursement(Reimbursement reimbursement) {
+        try(Connection connection = ConnectionUtil.getConnection()){
+            PreparedStatement ps = connection.prepareStatement("update REIMBURSEMENT set STATUS = ? where ID = ?");
+
+            ps.setString(1, reimbursement.getStatus());
+            ps.setInt(2, reimbursement.getId());
+
+            ps.executeUpdate();
+            connection.commit();
+
+            return true;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+
+//    @Override
+//    public List<Reimbursement> updateReimbursementPostman(int id, String status) {
+//
+//        try(Connection connection = ConnectionUtil.getConnection()){
+//            PreparedStatement ps = connection.prepareStatement("UPDATE reimbursement SET STATUS = ? WHERE id = ?");
+//            // UPDATE Student SET NAME = 'PRATIK' WHERE Age = 20;
+////        PreparedStatement ps = null;
+////
+//        ps.setInt(1, id);
+//        ps.setString(2, status);
+//
+//        ps.executeUpdate();
+//
+////            return true;
+//
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//        return null;
+//    }
+
+    @Override
     public List<Reimbursement> getPendingReimbursements() {
         return null;
     }
@@ -94,10 +135,7 @@ public class ReimbursementDAOImpl implements ReimbursementDAO {
         return null;
     }
 
-    @Override
-    public boolean updateReimbursement(Reimbursement reimbursement) {
-        return false;
-    }
+
 
 }
 
