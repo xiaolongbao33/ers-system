@@ -1,5 +1,6 @@
 package com.revature.servlets;
 
+import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.revature.daos.ReimbursementDAO;
@@ -12,9 +13,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.Writer;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.IntStream;
 
 public class ViewAllReimbursementsServlet extends HttpServlet {
 
@@ -38,7 +41,10 @@ public class ViewAllReimbursementsServlet extends HttpServlet {
         om.registerModule(new JavaTimeModule());
         String reimbursementJson = om.writeValueAsString(reimbursements);
 
+        resp.setHeader("Content-Type", "application/json");
+
         try(PrintWriter pw = resp.getWriter()) {
+            System.out.println(reimbursementJson);
             pw.write(reimbursementJson);
         }
 
