@@ -16,10 +16,10 @@ The [milestones.md](./milestones.md) can provide insight on helpful benchmarks.
   - CHECK - If the user is a manager, a successful login should redirect the request to the manager's 'all-reimbursement' page. 
   - CHECK - If the user is not a manager, a successful login should redirect to the employee's 'submit-reimbursement' page.
 - Managers should be able to view all reimbursement requests (view provided).
-  - IN PROGRESS - Managers should be able to view pending, approved, and denied requests.
+  - CHECK, just add to clear browser cache to update all-reimbursement.js ;-P - Managers should be able to view pending, approved, and denied requests.
 - Employees should be able to submit a new reimbursement request.
   - CHECK -Upon successfully submitting a reimbursement, an employee should be redirected to a page notifying them of its success and giving them an option to return to submit any additional reimbursements.
-- IN PROGRESS - Managers should be able to update the status of a reimbursement (through postman only, no view required).
+- IN PROGRESS, receiving 200 response in Postman, but no update in DB - Managers should be able to update the status of a reimbursement (through postman only, no view required).
 
 ### Bonus User Stories 
 - Employees should be able to view their specific reimbursements on the 'my-reimbursements' page (view provided).
