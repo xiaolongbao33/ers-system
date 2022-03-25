@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.time.LocalDate;
 
-public class ReimReqSubmissionServlet extends HttpServlet {
+public class ReimbursementSubmissionServlet extends HttpServlet {
 
     private ReimbursementDAO reimbursementDAO = new ReimbursementDAOImpl();
 
@@ -46,7 +46,7 @@ public class ReimReqSubmissionServlet extends HttpServlet {
         if(successfulCreation){
             //redirect to either submission request page or manager view all submission page
 //            resp.setStatus(201);
-            resp.sendRedirect("/ExpenseReimbursementSystem/submissionConfirmation.html");
+            resp.sendRedirect("/ExpenseReimbursementSystem/submission-confirmation.html");
         }
 
     }

@@ -19,12 +19,12 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>ReimReqSubmissionServlet</servlet-name>
-        <servlet-class>com.revature.servlets.ReimReqSubmissionServlet</servlet-class>
+        <servlet-name>ReimbursementSubmissionServlet</servlet-name>
+        <servlet-class>com.revature.servlets.ReimbursementSubmissionServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>ReimReqSubmissionServlet</servlet-name>
-        <url-pattern>/reimreq</url-pattern>
+        <servlet-name>ReimbursementSubmissionServlet</servlet-name>
+        <url-pattern>/reimbursement-request</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -33,7 +33,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>UpdateStatusServlet</servlet-name>
-        <url-pattern>/updatestatus</url-pattern>
+        <url-pattern>/status-update</url-pattern>
     </servlet-mapping>
 
 <!--    <servlet>-->
