@@ -18,12 +18,16 @@ public class UpdateStatusServlet extends HttpServlet {
 
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        Reimbursement reimbursement = new Reimbursement(3,"approved");
-        reimbursementDAO.updateReimbursement(reimbursement);
+        String idParam = req.getParameter("id");
+        String statusParam = req.getParameter("status");
 
-        //        if (successfulCreation) {
-//            System.out.println("Reimbursement " + reimbursement.getId() + " updated to " + reimbursement.getStatus());
-//        }
+        Reimbursement reimbursement = new Reimbursement(Integer.parseInt(idParam), statusParam);
+//        System.out.println(reimbursement);
+        boolean successfulCreation = reimbursementDAO.updateReimbursement(reimbursement);
+
+        if (successfulCreation) {
+            System.out.println("Reimbursement " + reimbursement.getId() + " updated to " + reimbursement.getStatus());
+        }
 
     }
 

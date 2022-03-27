@@ -25,17 +25,19 @@ public class Reimbursement {
         this.date = date;
     }
 
-    public Reimbursement(String description, String status, double amount, LocalDate date) {
+    public Reimbursement(String description, double amount, LocalDate date, String status) {
         super();
 //        this.id = id;
         this.description = description;
-        this.status = status;
         this.amount = amount;
         this.date = date;
-
+        this.status = status;
     }
 
     public Reimbursement(int id, String status) {
+        super();
+        this.id = id;
+        this.status = status;
     }
 
     public int getId() {

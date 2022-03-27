@@ -83,7 +83,8 @@ public class ReimbursementDAOImpl implements ReimbursementDAO {
             ps.setInt(2, reimbursement.getId());
 
             ps.executeUpdate();
-            connection.commit();
+//            connection.setAutoCommit(false);
+//            connection.commit();
 
             return true;
 

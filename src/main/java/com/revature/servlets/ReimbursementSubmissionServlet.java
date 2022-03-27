@@ -30,7 +30,7 @@ public class ReimbursementSubmissionServlet extends HttpServlet {
 
         System.out.println("We got some form data! Name = " + newDesc + " Password " + newAmount);
 
-        Reimbursement newReimbursement = new Reimbursement(newDesc, newStatus, amountDB, LocalDate.parse(newDate));
+        Reimbursement newReimbursement = new Reimbursement(newDesc, amountDB, LocalDate.parse(newDate), newStatus);
         System.out.println(newReimbursement.toString());
 
         if(newReimbursement.getDescription()==null){
